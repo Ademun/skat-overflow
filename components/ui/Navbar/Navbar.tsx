@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import {Navbar} from "react-skat-ui";
 import React, { useState } from 'react';
 import NavbarLink from './NavbarLink';
 import { links } from './NavbarLinks';
 
-const Navbar = () => {
+const Nav = () => {
   const [selectedLink, setSelectedLink] = useState(0);
   return (
-    <nav className='fixed w-48 h-full bg-[#e0e2ec] shadow-2dp p-4'>
+    <Navbar>
       <span className='text-xl font-medium'>Questions</span>
       <ul className='flex flex-col items-center w-full'>
         {links.map(link => (
@@ -22,8 +22,8 @@ const Navbar = () => {
           />
         ))}
       </ul>
-    </nav>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default Nav;
